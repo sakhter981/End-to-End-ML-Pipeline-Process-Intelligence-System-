@@ -10,7 +10,7 @@ from sklearn.metrics import classification_report
 
 # 1. SIMULATED DATA INGESTION
 def load_data():
-    # Simulating 20+ features as per your CV
+    # Simulating 20+ features 
     data = np.random.rand(1000, 20)
     columns = [f'feature_{i}' for i in range(20)]
     df = pd.DataFrame(data, columns=columns)
@@ -23,7 +23,7 @@ def engineer_features(df):
     # Example of extracting new intelligence from raw data
     df['feature_sum'] = df[[f'feature_{i}' for i in range(5)]].sum(axis=1)
     df['feature_mean'] = df[[f'feature_{i}' for i in range(5, 10)]].mean(axis=1)
-    # This fulfills the '20+ features' claim in your CV
+    # This fulfills the '20+ features' 
     return df
 
 # 3. BUILDING THE PIPELINE
